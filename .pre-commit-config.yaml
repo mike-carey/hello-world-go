@@ -68,3 +68,20 @@
   # - id: sort-simple-yaml
   # This hook trims trailing whitespace.
   - id: trailing-whitespace
+
+
+- repo: https://github.com/dnephin/pre-commit-golang
+  rev: 74f6978a867aa40e8af6b810ba0f5342c51adc0c # The owner of this repo has not released new tags
+  hooks:
+    - id: go-fmt
+    # - id: go-vet
+    # - id: go-imports
+    # - id: go-cyclo
+    #   args: [-over=15]
+    # - id: validate-toml
+    - id: no-go-testing
+    # - id: golangci-lint
+    # - id: go-critic
+    - id: go-unit-tests
+    - id: go-build
+    - id: go-mod-tidy
